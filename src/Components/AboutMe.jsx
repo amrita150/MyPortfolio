@@ -1,73 +1,50 @@
-import React from "react";
-import { motion } from "framer-motion";
+import { SiJavascript, SiReact, SiNodedotjs } from "react-icons/si";
 import { FaGraduationCap } from "react-icons/fa";
-import { SiCplusplus, SiJavascript, SiMongodb } from "react-icons/si";
-import profileImage from "../assets/amrita.jpg";
+import  myImage from "../assets/amrita.jpg"
 
-const AboutMeCard = () => {
+const AboutMe = () => {
   return (
-    <div className="pt-24 relative min-h-screen bg-gradient-to-br from-[#0d012f] via-[#14043b] to-[#0b022e] flex items-center justify-center  px-4">
-      {/* Glass Card */}
-      <motion.div
-        initial={{ opacity: 0, scale: 0.9 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 1 }}
-        className="relative z-10 w-full max-w-3xl bg-white/5 backdrop-blur-xl border border-white/10 text-white rounded-[2rem] p-10 shadow-2xl"
-      >
-        <h2 className="text-center text-blue-300 text-lg tracking-wider font-semibold mb-4">
-          ABOUT ME
-        </h2>
+    <div className="relative flex items-center justify-center min-h-screen px-4 ">
+      {/* Glassmorphism Card */}
+      <div className="max-w-3xl w-full bg-white/10 backdrop-blur-md rounded-2xl shadow-lg p-8 text-center border border-white/20">
+        
+        {/* Title */}
+        <h2 className="text-blue-300 tracking-widest mb-4 font-bold">ABOUT ME</h2>
 
-        <div className="flex flex-col items-center text-center">
+        {/* Profile Image */}
+        <div className="w-28 h-28 mx-auto mb-4 rounded-full overflow-hidden border-4 border-white/30">
           <img
-            src={profileImage}
+            src= {myImage}// replace with your image path
             alt="Amrita Kataria"
-            className="w-32 h-32 rounded-full object-cover border-4 border-white/20 mb-4 shadow-md"
+            className="w-full h-full object-cover"
           />
-          <h1 className="text-2xl font-bold mb-3">Hi, I’m Amrita Kataria</h1>
-          <p className="text-white/80 text-sm leading-relaxed">
-            A passionate and curious developer with a strong foundation in computer science. I completed
-            my B.Sc. (Hons) in Computer Science from Sri Guru Gobind Singh College of Commerce, Delhi
-            University, and I’m pursuing my Master of Computer Applications (MCA) from GGSIPU, Delhi. <br />
-            I love building real-world projects that solve meaningful problems. Over the past few months,
-            I’ve developed applications using React.js and Tailwind CSS, and explored backend technologies
-            including Node.js, Express.js, and MongoDB for integration. I enjoy learning new technologies,
-            solving challenges, and continuously improving my craft.
-          </p>
         </div>
+
+        {/* Name */}
+        <h3 className="text-2xl font-bold text-white mb-4">
+          Hi, I’m Amrita Kataria
+        </h3>
+
+        {/* Description */}
+        <p className="text-gray-200 leading-relaxed mb-6 text-sm sm:text-base">
+          A passionate and curious developer with a strong foundation in computer science. 
+          I completed my B.Sc. (Hons) in Computer Science from Sri Guru Gobind Singh College of Commerce, Delhi University, 
+          and I’m pursuing my Master of Computer Applications (MCA) from GGSIPU, Delhi.
+          Over the past few months, I’ve developed applications using React.js and Tailwind CSS, 
+          explored backend technologies like Node.js, Express.js, and MongoDB, 
+          and I enjoy learning new technologies, solving challenges, and improving my craft.
+        </p>
 
         {/* Icons */}
-        <div className="flex justify-center gap-8 mt-6 text-blue-200 text-2xl">
+        <div className="flex justify-center gap-6 text-white text-2xl">
           <FaGraduationCap title="Education" />
-          <SiCplusplus title="C++" />
-          <SiJavascript title="JavaScript" />
-          <SiMongodb title="MongoDB" />
+          <SiReact title="React.js" className="text-sky-400" />
+          <SiJavascript title="JavaScript" className="text-yellow-400" />
+          <SiNodedotjs title="Node.js" className="text-green-400" />
         </div>
-      </motion.div>
+      </div>
     </div>
   );
 };
 
-export default AboutMeCard;
-// import React from 'react';
-// import profile from '../assets/amrita.jpg';
-// const AboutMe = () => {
-//   return(
-//      <div>
-//         <h2>About Me</h2>
-//         <img src={profile} alt="my-profile" className='w-32 h-32 rounded-full' />
-//         <h1 className="text-2xl font-bold">Hi, I’m Amrita Kataria</h1>
-//         <p className="text-black/80 ">
-//           A passionate and curious developer with a strong foundation in computer science. I completed
-//           my B.Sc. (Hons) in Computer Science from Sri Guru Gobind Singh College of Commerce, Delhi
-//           University, and I’m pursuing my Master of Computer Applications (MCA) from GGSIPU, Delhi. <br />
-//           I love building real-world projects that solve meaningful problems. Over the past few months,
-//           I’ve developed applications using React.js and Tailwind CSS, and explored backend technologies
-//           including Node.js, Express.js, and MongoDB for integration. I enjoy learning new technologies,
-//           solving challenges, and continuously improving my craft.
-//         </p>
-//      </div>
-//   )
-// }
-
-// export default AboutMe;
+export default AboutMe;
