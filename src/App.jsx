@@ -43,8 +43,8 @@ export default function App() {
   return (
     <Router basename="/MyPortfolio">
       <HeroLayout>
-        <Navbar />
-        <SwipeDeck />
+        {/* <Navbar /> */}
+        {/* <SwipeDeck /> */}
       </HeroLayout>
     </Router>
   );
