@@ -35,16 +35,16 @@
 // }
 
 import HeroLayout from "../src/Components/HeroLayout";
-// import Navbar from "../src/Components/NavBar";
-// import SwipeDeck from "../src/Components/SwipeDeck";
+import Navbar from "../src/Components/NavBar";
+import SwipeDeck from "../src/Components/SwipeDeck";
 import { BrowserRouter as Router } from "react-router-dom";
 
 export default function App() {
   return (
     <Router basename="/MyPortfolio">
       <HeroLayout>
-        {/* <Navbar /> */}
-        {/* <SwipeDeck /> */}
+        <Navbar />
+        <SwipeDeck />
       </HeroLayout>
     </Router>
   );
