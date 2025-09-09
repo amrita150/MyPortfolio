@@ -40,7 +40,7 @@ const projectData = [
 ];
 
 const Projects = () => {
-  return (
+  return (//window size check //do return avleue , ek phone ek desktop if window size smaller then this componentn alag alag component for mobile and laptop....
     <div className="relative flex items-center justify-center min-h-screen px-4">
       {/* Glassmorphism Container */}
       <div className="max-w-4xl w-full bg-white/10 backdrop-blur-md rounded-2xl shadow-lg p-8 text-center border border-white/20">

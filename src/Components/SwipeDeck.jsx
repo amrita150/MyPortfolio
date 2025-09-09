@@ -257,13 +257,13 @@ const SwipeDeck = () => {
           const isHidden = index < currentIndex;
           return (
             <TinderCard
-  key={section.id}
-  ref={(el) => (childRefs.current[index] = el)}
-  className="absolute w-full h-full"
-  onSwipe={(dir) => swiped(dir, index)}
-  preventSwipe={["left", "right"]} // Allow up/down swiping for scrolling
-  onCardLeftScreen={() => {}}
->
+              key={section.id}
+              ref={(el) => (childRefs.current[index] = el)}
+              className="absolute w-full h-full"
+              onSwipe={(dir) => swiped(dir, index)}
+              preventSwipe={["up", "down"]}
+              onCardLeftScreen={() => {}}
+            >
               <div
                 className={`absolute inset-0 overflow-y-auto rounded-2xl hide-scrollbar transition-all duration-300 ${
                   isHidden ? "opacity-0 pointer-events-none" : "opacity-100"

@@ -38,6 +38,8 @@ import HeroLayout from "../src/Components/HeroLayout";
 import Navbar from "../src/Components/NavBar";
 import SwipeDeck from "../src/Components/SwipeDeck";
 import { BrowserRouter as Router } from "react-router-dom";
+import Skills from "./Components/Skills";
+
 
 export default function App() {
   return (

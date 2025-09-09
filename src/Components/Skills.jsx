@@ -72,14 +72,12 @@ const Skills = () => {
 
   return (
     <section id="skills" className="py-10 flex justify-center">
-      <div className="max-w-5xl w-full px-26">
+      
+      {/* Desktop / large screens */}
+      <div className="hidden sm:block max-w-5xl w-full px-6">
         <div className="rounded-3xl p-8 bg-white/10 backdrop-blur-lg border border-white/20 shadow-xl">
-          <h2 className="text-3xl font-bold text-center text-blue-300 mb-3">
-            My Skills
-          </h2>
-          <p className="text-center text-gray-300 mb-5">
-            Technologies and tools I work with.
-          </p>
+          <h2 className="text-3xl font-bold text-center text-blue-300 mb-3">My Skills</h2>
+          <p className="text-center text-gray-300 mb-5">Technologies and tools I work with.</p>
 
           <div className="space-y-10">
             {skillGroups.map((group, idx) => (
@@ -101,6 +99,32 @@ const Skills = () => {
               </div>
             ))}
           </div>
+        </div>
+      </div>
+
+      {/* Mobile / small screens */}
+      <div className="block sm:hidden w-full px-4">
+        <div className="rounded-2xl p-4 bg-white/10 backdrop-blur-md border border-white/20 shadow-lg">
+          <h2 className="text-xl font-bold text-center text-blue-300 mb-3">My Skills</h2>
+          <p className="text-center text-gray-300 mb-4 text-sm">Technologies and tools I work with.</p>
+
+          {skillGroups.map((group, idx) => (
+            <div key={idx} className="mb-6">
+              <h3 className="font-semibold text-white mb-2">{group.title}</h3>
+              <div className="flex flex-wrap gap-2">
+                {group.skills.map((skill, index) => (
+                  <div
+                    key={index}
+                    className="flex items-center gap-2 px-3 py-1 rounded bg-white/20 text-white text-sm"
+                  >
+                    {skill.icon}
+                    <span>{skill.name}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+
         </div>
       </div>
     </section>
